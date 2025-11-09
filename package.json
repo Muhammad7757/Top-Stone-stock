@@ -15,5 +15,11 @@
   },
   "build": {
     "output": "build.log"
-  }
+  },
+  "postinstall": [
+    "cd /d C:\\Users\\HP\\Desktop\\gss\\granite_stock_manager_v2",
+    "npm install",
+    "npm run build > build.log 2>&1",
+    "powershell -Command \"Get-Content build.log -Tail 200\""
+  ]
 }
